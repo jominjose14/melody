@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  background-color: black;
+}
+
+.heading {
+  margin: 0;
+  padding: 0;
+  font-size: 7em;
+  font-family: 'Bungee Outline', cursive;
+  color: red;
+  text-align: center;
+}
+
+.piano {
+  margin: 0 18% 1%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  grid-column-gap: 0.25em;
+}
+
+.piano > div {
+  box-sizing: border-box;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 2.5px;
+  border-color: #333;
+  height: 25em;
+  text-align: center;
+}
+
+.white {
+  background-color: white;
+}
+
+.black {
+  color: white;
+  background-color: black;
+}
