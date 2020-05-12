@@ -8,19 +8,20 @@ body {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  background-color: black;
+  background-image: linear-gradient(#000,#222,#000);
 }
 
 .heading {
   flex: 2;
-  margin: 1% auto 0;
-  color: red;
+  margin: 3% auto 7%;
+  color: #b30909;
   text-align: center;
 }
 
 .heading > span {
   font-family: 'Bungee Outline', cursive;
-  font-size: 7rem;
+  font-size: 6rem;
+  font-weight: bold;
   line-height: 1;
 }
 
@@ -30,18 +31,18 @@ body {
 
 .piano {
   flex: 7;
-  margin: 0 18% 2%;
+  margin: 0 1% 9%;
   padding: 10px;
   display: grid;
   grid-template-columns: repeat(13, 1fr);
-  column-gap: 0.25em;
+  column-gap: 0.1em;
 }
 
 .piano > div {
   box-sizing: border-box;
-  border: 2.5px solid #333;
+  border: 2px solid #333;
   border-radius: 5px;
-  height: 22.5em;
+  height: 17em;
   text-align: center;
 }
 
@@ -50,8 +51,11 @@ body {
 }
 
 .black {
-  color: white;
-  background-color: black;
+  background-image: linear-gradient(#222,#000);
+}
+
+.piano > div:hover {
+  box-shadow: 0 2px 5px 2px white;
 }
 
 .footer {
@@ -59,9 +63,9 @@ body {
   align-self: center;
   position: fixed;
   bottom: 0;
-  margin: 1% auto 1%;
+  margin: 0 auto 1%;
   text-align: center;
-  font-size: 20px;
+  font-size: 22.5px;
   font-family: 'Amatic SC', cursive;
   color: white;
   text-decoration: none;
@@ -75,5 +79,48 @@ body {
 .footer > a:hover {
   color: red;
   font-size: 1.15em;
+}
+
+.caption {
+  font-size: 1.2em;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.mouse-on-caption {
+  color: red;
+  font-size: 1.25em;
+}
+
+.new-tile {
+  background-image: none;
+  background-color: #b30909;
+  box-shadow: 0 2px 5px 5px white;
+}
+
+.wrong-answer {
+  background-image: none;
+  background-color: white;
+}
+
+@media(min-width: 768px) {
+  .heading {
+    margin: 1.5% auto 0.5%;
+  }
+
+  .heading > span {
+    font-size: 7rem;
+  }
+
+  .piano {
+    margin: 0 18% 2%;
+    column-gap: 0.25em;
+  }
+
+  .piano > div {
+    height: 22.5em;
+  }
 }
 
