@@ -24,14 +24,18 @@ $("#caption").mouseleave(() => {
 $("#caption").click(() => {
     if(!clickedOnce) {
         (new Audio("./audio/intro.mp3")).play();
-        $("#caption").animate({"opacity":0},1000,() => {
-            $("#caption").text("😄 Welcome 😃").animate({"opacity":1},1000);
+        $("#caption").animate({"opacity":0},500,() => {
+            $("#caption").text("😄 Welcome 😃").animate({"opacity":1},1000,() => {
+                $("#caption").animate({"opacity":0},500,() => {
+                    $("#caption").text("🧐 Follow the pattern 🤯").animate({"opacity":1},500);
+                });
+            });
         });
         clickedOnce = true;
         setTimeout(() => {
             started = true;
             nextLevel();
-        }, 5000);
+        }, 6000);
     } else if(!started) {
         started = true;
         nextLevel();

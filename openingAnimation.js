@@ -37,4 +37,4 @@ setTimeout(() => {
     $("#caption").animate({"opacity":0},400,() => {
         $("#caption").text("Click here to start").animate({"opacity":1},400);
     });
-}, 2700);
+}, 1600);
