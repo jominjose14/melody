@@ -114,6 +114,25 @@ body {
   background-color: white;
 }
 
+.popup {
+  display: none;
+  position: absolute;
+  top: 45vh;
+  left: 40vw;
+  box-shadow: 0 0 20px 10px grey;
+  border-radius: 15px;
+  border: solid 2px white;
+  width: 20vw;
+  height: 10vh;
+  padding: 1%;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.75em;
+  text-align: center;
+  line-height: 10vh;
+  color: white;
+  background-image: linear-gradient(to bottom right, #000,#222,#000);
+}
+
 @media(min-width: 768px) {
   .heading {
     margin: 1.5% auto 0.5%;

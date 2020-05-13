@@ -5,8 +5,9 @@ const gamePattern = [];
 const playerPattern = [];
 
 var mode = 0;
-var modes = ["Easy", "Hard", "Pro"];
+var modes = [{diff: "Easy", name: "B", hs: 0},{diff: "Hard", name: "W", hs: 0}, {diff: "Pro", name: "<BW>", hs: 0}];
 var started = false;
+var clickedOnce = false;
 var level = 0;
 
 //Caption Behaviour b4 game starts
@@ -21,7 +22,17 @@ $("#caption").mouseleave(() => {
 });
 
 $("#caption").click(() => {
-    if(!started) {
+    if(!clickedOnce) {
+        (new Audio("./audio/intro.mp3")).play();
+        $("#caption").animate({"opacity":0},1000,() => {
+            $("#caption").text("😄 Welcome 😃").animate({"opacity":1},1000);
+        });
+        clickedOnce = true;
+        setTimeout(() => {
+            started = true;
+            nextLevel();
+        }, 5000);
+    } else if(!started) {
         started = true;
         nextLevel();
     }
@@ -44,7 +55,7 @@ $(".heading").click(() => {
         (new Audio("./audio/mode.mp3")).play();
         mode = (mode + 1) % 3;
         $(".heading").animate({"opacity":0},200,() => {
-            $(".heading").html("<span></span><span>"+modes[mode]+"</span><span> Mode</span>")
+            $(".heading").html("<span></span><span>"+modes[mode].diff+"</span><span> "+modes[mode].hs+"</span>")
             .animate({"opacity":1},200,() => {
                 setTimeout(() => {
                     $(".heading").animate({"opacity":0},200,() => {
@@ -78,22 +89,41 @@ function check(index) {
         //audio
         (new Audio("./audio/error.mp3")).play();
 
+        //Message
+        let message = "";
+        if(level <= 3) {
+            message = "Find a well and jump🙄";
+        } else if(mode === 0 && level >= 9 || mode === 1 && level >= 7 || mode === 3 && level >= 5) {
+            message = "You are Amazing😎";
+        } else if(mode === 3 && level >= 10) {
+            message = "You are an Alien👽";
+        } else {
+            message = "Could be better🥱";
+        }
+        $(".popup").text(message).fadeIn(500);
+        setTimeout(() => {
+            $(".popup").fadeOut(500);
+        }, 1500);
+
         //flash
         $("body").addClass("wrong-answer");
         setTimeout(() => {
             $("body").removeClass("wrong-answer");
         }, 100); 
 
+        //Update highscore
+        modes[mode].hs = level*100 > modes[mode].hs ? level*100 : modes[mode].hs;
+
         //Show score
         $("#caption").animate({"opacity":0},400,() => {
-            $("#caption").text("Score: "+(level*100)+" in "+modes[mode]+" Mode").animate({"opacity":1},400,() => {
+            $("#caption").text("Score: "+(level*100)+" in "+modes[mode].diff+" Mode").animate({"opacity":1},400,() => {
                 setTimeout(() => {
                     reset();
                     //Play again
                     $("#caption").animate({"opacity":0},400,() => {
                         $("#caption").text("Play Again").animate({"opacity":1},400);
                     });
-                }, 2000);
+                }, 2500);
             });
         });
     }

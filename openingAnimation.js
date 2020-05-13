@@ -1,5 +1,3 @@
-(new Audio("./audio/intro.mp3")).play();
-
 $(".heading").removeClass("hide");
 $(".heading").css("opacity",0).animate({"opacity":1},1500);
 
