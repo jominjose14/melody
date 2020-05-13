@@ -8,7 +8,7 @@ body {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(#000,#222,#000);
+  background-image: linear-gradient(#000,#222,#222,#000);
 }
 
 .heading {
@@ -16,6 +16,14 @@ body {
   margin: 3% auto 7%;
   color: #b30909;
   text-align: center;
+}
+
+.heading :hover {
+  cursor: pointer;
+}
+
+.hide {
+  opacity: 0;
 }
 
 .heading > span {
@@ -56,6 +64,7 @@ body {
 
 .piano > div:hover {
   box-shadow: 0 2px 5px 2px white;
+  cursor: grab;
 }
 
 .footer {
@@ -123,4 +132,3 @@ body {
     height: 22.5em;
   }
 }
-
