@@ -1,2 +1,2 @@
 # melody
-A melody memory game
+A memory game
