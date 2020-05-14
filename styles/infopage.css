@@ -69,6 +69,15 @@ ul li {
     text-align: justify;
 }
 
+.me {
+    display: block;
+    height: 200px;
+    width: 200px;
+    margin: 20px auto 0;
+    border-style: double;
+    border-radius: 50%;
+}
+
 .video {
     height: 100%;
     width: 100%;
@@ -80,9 +89,18 @@ ul li {
     outline: none;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
 .button-container {
     margin: 2% auto 2%;
-    width: 12%;
+    width: 18%;
     height: 10%;
 }
 
@@ -120,11 +138,6 @@ ul li {
     text-decoration: none;
 }
 
-.footer > a {
-    color: white;
-    text-decoration: none;
-}
-
 .footer > a:hover {
     color: red;
     font-size: 1.15em;
@@ -145,5 +158,14 @@ ul li {
   
     .para {
         width: 50%;
+    }
+
+    .me {
+        height: 300px;
+        width: 300px;
+    }
+
+    .button-container {
+        width: 11%;
     }
   }
