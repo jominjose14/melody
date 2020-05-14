@@ -126,7 +126,7 @@ body {
   height: 10vh;
   padding: 1%;
   font-family: 'Amatic SC', cursive;
-  font-size: 1.75em;
+  font-size: 0.7em;
   text-align: center;
   line-height: 10vh;
   color: white;
@@ -149,5 +149,9 @@ body {
 
   .piano > div {
     height: 22.5em;
+  }
+
+  .popup {
+    font-size: 1.75em;
   }
 }

@@ -69,6 +69,44 @@ ul li {
     text-align: justify;
 }
 
+.video {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.video:focus {
+    outline: none;
+}
+
+.button-container {
+    margin: 2% auto 2%;
+    width: 12%;
+    height: 10%;
+}
+
+.button-container > a {
+    text-decoration: none;
+}
+
+.button {
+    display: block;
+    padding: 3px 4px 3px;
+    text-align: center;    
+    background-image: linear-gradient(#000,#111,#1f1f1f,#222);
+    box-shadow: 0 0 7px 2px grey;
+    border: solid 4px white;
+    border-radius: 20%;
+    font-size: 5em;
+    font-weight: bold;
+    color: white;
+}
+
+.button:hover {
+    background-image: linear-gradient(#b30909,#e30909,#f00);
+}
+
 .copyright {
     margin: 5% auto 2%;
     font-size: 1.5em;

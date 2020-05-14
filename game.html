@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/piano.png">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/game.css" />
+    <title>Melody-a Memory Game</title>
+  </head>
+  <body>
+    <div class="heading hide">
+      <span id="m">M</span>
+      <span id="e">e</span>
+      <span id="l">l</span>
+      <span id="o">o</span>
+      <span id="d">d</span>
+      <span id="y">y</span>
+    </div>
+
+    <div class="piano">
+      <div id="one" class="note white"></div>
+      <div id="two" class="note black"></div>
+      <div id="three" class="note white"></div>
+      <div id="four" class="note black"></div>
+      <div id="five" class="note white"></div>
+      <div id="six" class="note white"></div>
+      <div id="seven" class="note black"></div>
+      <div id="eight" class="note white"></div>
+      <div id="nine" class="note black"></div>
+      <div id="ten" class="note white"></div>
+      <div id="eleven" class="note black"></div>
+      <div id="twelve" class="note white"></div>
+      <div id="thirteen" class="note white"></div>
+    </div>
+
+    <div class="popup hidden">
+      Find a well and jump🙄
+    </div>
+    
+    <div class="footer">
+      <a href="help.html">Help</a>
+      &nbsp &nbsp &nbsp &nbsp | &nbsp &nbsp &nbsp <span id="caption" class="caption">Melody - A memory game</span> &nbsp &nbsp &nbsp | &nbsp &nbsp &nbsp &nbsp
+      <a href="about.html">About</a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="openingAnimation.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>

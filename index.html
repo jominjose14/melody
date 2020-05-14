@@ -1,52 +1,75 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/piano.png">
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/index.css" />
-    <title>Melody</title>
-  </head>
-  <body>
-    <div class="heading hide">
-      <span id="m">M</span>
-      <span id="e">e</span>
-      <span id="l">l</span>
-      <span id="o">o</span>
-      <span id="d">d</span>
-      <span id="y">y</span>
-    </div>
+    <link rel="stylesheet" href="./styles/infopage.css" />
+    <title>Melody-Home</title>
+</head>
+<body>
+    <div class="heading">
+        <span id="m">M</span>
+        <span id="e">e</span>
+        <span id="l">l</span>
+        <span id="o">o</span>
+        <span id="d">d</span>
+        <span id="y">y</span>
+      </div>
 
-    <div class="piano">
-      <div id="one" class="note white"></div>
-      <div id="two" class="note black"></div>
-      <div id="three" class="note white"></div>
-      <div id="four" class="note black"></div>
-      <div id="five" class="note white"></div>
-      <div id="six" class="note white"></div>
-      <div id="seven" class="note black"></div>
-      <div id="eight" class="note white"></div>
-      <div id="nine" class="note black"></div>
-      <div id="ten" class="note white"></div>
-      <div id="eleven" class="note black"></div>
-      <div id="twelve" class="note white"></div>
-      <div id="thirteen" class="note white"></div>
-    </div>
+      <h2>⚜ Welcome ⚜</h2>
 
-    <div class="popup hidden">
-      Find a well and jump🙄
-    </div>
-    
-    <div class="footer">
-      <a href="help.html">Help</a>
-      &nbsp &nbsp &nbsp &nbsp | &nbsp &nbsp &nbsp <span id="caption" class="caption">Melody - A memory game</span> &nbsp &nbsp &nbsp | &nbsp &nbsp &nbsp &nbsp
-      <a href="about.html">About</a>
-    </div>
+      <hr>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="openingAnimation.js"></script>
-    <script src="index.js"></script>
-  </body>
+      <div class="para">
+        <h3>Where am I?</h3>
+        <p>
+                You are at Melody, a piano on the web. Have fun making music, but when you are ready for a challenge, play the memory game!
+        </p>
+      </div>
+
+      <div class="para">
+        <h3>As a Piano</h3>
+        <p>
+                <ul>
+                    <li>
+                        <b>White keys:</b> A, W, S, E, D, F, T, G, Y, H, U, J, K  
+                    </li>
+                    <li>
+                        <b>Black keys:</b> W, E, T, Y, U 
+                    </li>
+                </ul>
+        </p>
+      </div>
+
+      <div class="para">
+        <h3>The Memory Game</h3>
+        <br><br>
+        <p>
+                <video class="video" autoplay loop controls>
+                    <source src="./video/tutorial.mp4" type="video/mp4">
+                    Tutorial Video
+                </video>
+        </p>
+        <p>
+            Follow the pattern, tile-by-tile.
+        </p>
+      </div>
+
+      <div class="button-container">
+      <a href="game.html">
+            <div class="button">Go</div>
+        </a>
+      </div>
+
+      <p class="copyright">Melody &nbsp | &nbsp Copyright &copy 2020</p>
+
+      <div class="footer">
+        <a href="help.html">Help</a>
+        &nbsp &nbsp &nbsp &nbsp | &nbsp &nbsp &nbsp <span id="caption" class="caption">Melody - A memory game</span> &nbsp &nbsp &nbsp | &nbsp &nbsp &nbsp &nbsp
+        <a href="about.html">About</a>
+      </div>
+</body>
 </html>

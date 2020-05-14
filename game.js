@@ -1,11 +1,12 @@
 //Global Variables
 
 const tiles = ["one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen"];
+const keymap = {a: "one", w: "two", s: "three", e: "four", d: "five", f: "six", t: "seven", g: "eight", y: "nine", h: "ten", u: "eleven", j: "twelve", k: "thirteen"};
 const gamePattern = [];
 const playerPattern = [];
 
 var mode = 0;
-var modes = [{diff: "Easy", name: "B", hs: 0},{diff: "Hard", name: "W", hs: 0}, {diff: "Pro", name: "<BW>", hs: 0}];
+const modes = [{diff: "Easy", name: "B", hs: 0},{diff: "Hard", name: "W", hs: 0}, {diff: "Pro", name: "<BW>", hs: 0}];
 var started = false;
 var clickedOnce = false;
 var level = 0;
@@ -49,6 +50,16 @@ $(".piano > div").click((e) => {
     $(e.target).fadeOut(100).fadeIn(100);
     if(started) {
         playerPattern.push($(e.target).attr("id"));
+        check(playerPattern.length-1);
+    }
+});
+
+$(document).keypress((e) => {
+    const pressedTile = keymap[e.key];
+    (new Audio("./audio/"+pressedTile+".mp3")).play();
+    $("#"+pressedTile).fadeOut(100).fadeIn(100);
+    if(started) {
+        playerPattern.push($("#"+pressedTile).attr("id"));
         check(playerPattern.length-1);
     }
 });
