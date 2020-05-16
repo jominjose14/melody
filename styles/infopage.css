@@ -180,10 +180,6 @@ a:hover {
     hr {
         width: 20%;
     }
-  
-    .para {
-        width: 50%;
-    }
 
     .me {
         height: 300px;
@@ -199,5 +195,9 @@ a:hover {
 @media(min-width: 768px) {
     .heading > span {
         font-size: 8rem;
+    }
+
+    .para {
+        width: 50%;
     }
 }
