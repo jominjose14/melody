@@ -168,7 +168,7 @@ a:hover {
     font-size: 1.2em;
 }
 
-@media(min-width: 360px) {
+@media(min-width: 386px) {
     body {
         font-size: 11px;
     }

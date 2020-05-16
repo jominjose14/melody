@@ -138,7 +138,7 @@ body {
   background-image: linear-gradient(to bottom right, #000,#222,#000);
 }
 
-@media(min-width: 360px) { /*for tabs and laps*/
+@media(min-width: 386px) { /*for tabs and laps*/
   .spaceformobile {
     height: 0;
   }
