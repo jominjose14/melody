@@ -11,6 +11,10 @@ body {
   background-image: linear-gradient(#000,#222,#222,#000);
 }
 
+.spaceformobile {
+  height: 30vh;
+}
+
 .heading {
   flex: 2;
   margin: 3% auto 7%;
@@ -51,7 +55,7 @@ body {
   box-sizing: border-box;
   border: 2px solid #333;
   border-radius: 5px;
-  height: 17em;
+  height: 15em;
   text-align: center;
 }
 
@@ -134,7 +138,11 @@ body {
   background-image: linear-gradient(to bottom right, #000,#222,#000);
 }
 
-@media(min-width: 768px) {
+@media(min-width: 360px) { /*for tabs and laps*/
+  .spaceformobile {
+    height: 0;
+  }
+
   .heading {
     margin: 1.5% auto 0.5%;
   }

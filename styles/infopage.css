@@ -37,7 +37,7 @@ body {
 
 .heading > span {
     font-family: 'Bungee Outline', cursive;
-    font-size: 6rem;
+    font-size: 4.5rem;
     font-weight: bold;
     line-height: 1;
 }
@@ -168,13 +168,13 @@ a:hover {
     font-size: 1.2em;
 }
 
-@media(min-width: 768px) {
+@media(min-width: 360px) {
     body {
         font-size: 11px;
     }
 
     .heading > span {
-      font-size: 8rem;
+      font-size: 6rem;
     }
 
     hr {
@@ -193,6 +193,11 @@ a:hover {
     .button-container {
         width: 11%;
         padding: 3px 4px 7px;
-
     }
-  }
+}
+
+@media(min-width: 768px) {
+    .heading > span {
+        font-size: 8rem;
+    }
+}
