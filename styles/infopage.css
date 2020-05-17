@@ -37,7 +37,7 @@ body {
 
 .heading > span {
     font-family: 'Bungee Outline', cursive;
-    font-size: 4.5rem;
+    font-size: 3rem;
     font-weight: bold;
     line-height: 1;
 }
@@ -57,7 +57,7 @@ hr {
     width: 30%;
     border-style: dotted none none;
     border-width: 5px;
-    border-color: #e30909;
+    border-color: #eee;
 }
 
 .para {
@@ -121,7 +121,7 @@ a:hover {
 
 .button-container {
     margin: 2% auto 2%;
-    width: 18%;
+    width: 30%;
     height: 10%;
 }
 
@@ -179,7 +179,6 @@ a:hover {
 
     hr {
         width: 20%;
-        border-color: #eee;
     }
 
     .me {
