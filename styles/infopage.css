@@ -57,7 +57,7 @@ hr {
     width: 30%;
     border-style: dotted none none;
     border-width: 5px;
-    border-color: #eee;
+    border-color: #e30909;
 }
 
 .para {
@@ -179,7 +179,7 @@ a:hover {
 
     hr {
         width: 20%;
-        border-color: #e30909;
+        border-color: #eee;
     }
 
     .me {
