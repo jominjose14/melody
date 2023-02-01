@@ -160,21 +160,21 @@ function check(index) {
     //Message
     let message = "";
     if (level <= 3) {
-      message = "Find a well and jump🙄";
+      message = "Game over! Your score is too low ☹️";
     } else if (
       (mode === 0 && level >= 9) ||
       (mode === 1 && level >= 7) ||
       (mode === 3 && level >= 5)
     ) {
-      message = "You are Amazing😎";
+      message = "Game over! Your score is amazing 😎";
     } else if (mode === 3 && level >= 10) {
-      message = "You are an Alien👽";
+      message = "Game over! Your score is exceptional...are you an Alien 👽 ?";
     } else {
-      message = "Could be better🥱";
+      message = "Game over! Your score could have been better 🥱";
     }
-    $(".popup").text(message).fadeIn(500);
+    $(".popup").text(message).addClass('grid').fadeIn(500);
     setTimeout(() => {
-      $(".popup").fadeOut(500);
+      $(".popup").removeClass('grid').fadeOut(500);
     }, 1500);
 
     //flash

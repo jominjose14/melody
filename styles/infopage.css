@@ -165,9 +165,12 @@ a:hover {
   text-decoration: none;
 }
 
+.footer > * {
+  transition: 0.5s;
+}
+
 .footer > a:hover {
   color: red;
-  font-size: 1.15em;
 }
 
 .caption {
